@@ -1,0 +1,21 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: payment80
+spring:
+  application:
+    name: cloud-order-service
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 1000
+
+feign:
+  hystrix:
+    enabled: true
