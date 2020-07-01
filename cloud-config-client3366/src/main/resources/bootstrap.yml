@@ -1,19 +1,19 @@
 server:
-  port: 3355
+  port: 3366
 spring:
   application:
-    name: config-client3355
-  cloud:
-    config:
-      label: master
-      name: application
-      profile: dev
-      uri: http://localhost:3344
+    name: config-client3366
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
+  cloud:
+    config:
+      uri: http://localhost:3344
+      label: master
+      name: application
+      profile: dev
 eureka:
   client:
     register-with-eureka: true
